@@ -1,33 +1,23 @@
-ALGORITHM CHECKP2
+ALGORITHM CHECHP1
 VAR
-    tab1, tab2: ARRAY_OF INTEGER;
-    sum, i, j: INTEGER=0;
-    check: BOOLEAN;
-BEGIN
-    FOR i FROM 0 TO tab1.length-1 STEP  DO
-    check:= FALSE;
-        FOR j FROM 0 TO tab2.length-1 STEP DO 
-           IF (tab1[i]=tab2[j]) THEN
-           check:= TRUE;
-            BREAK
-           END_IF
-        END_FOR
-        IF (check=FALSE) THEN
-           sum:= tab1[i];
-        END_IF
-    END_FOR
+    number_of_charater:INTEGER=0;
+    The_number_of_words:INTEGER=1;
+    The_number_of_vowels:INTEGER=0;
+    i:INTEGER;
+    s:STRING;
 
-    FOR i FROM 0 TO tab2.length-1 STEP  DO
-    check:= FALSE;
-        FOR j FROM 0 TO tab1.length-1 STEP DO 
-           IF (tab2[i]=tab1[j]) THEN
-           check:= TRUE;
-            BREAK
-           END_IF
-        END_FOR
-        IF (check=FALSE) THEN
-           sum:= tab2[i];
-        END_IF
-    END_FOR
-    write ("the sum is", sum);
+BEGIN
+       WHILE (s[i]<>".") DO
+            number_of_charater++;
+IF (s[i]=" ") THEN
+    The_number_of_words++;
+
+END_IF
+IF(s[i]="a" OR s[i]="e" OR s[i]="i" OR s[i]="o" OR s[i]="u" OR s[i]="y" OR s[i]="A" OR s[i]="E" OR s[i]="I" OR s[i]="O" OR s[i]="U" OR s[i]="Y")  THEN
+    The_number_of_vowels++;
+END_IF
+    END_WHILE
+    write("number_of_charater is : ",number_of_charater )
+    write("The_number_of_words : ", The_number_of_words)
+    write("The_number_of_vowels : ",The_number_of_vowels)
 END
