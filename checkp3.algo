@@ -1,6 +1,7 @@
-ALGORITHM algorithm_name
+PROCEDURE Dot_product(ps:FLOAT)
 VAR
-    set_declarations
+     v1, v2:
 BEGIN
     set_instructions
+ 
 END

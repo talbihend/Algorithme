@@ -1,0 +1,21 @@
+PROCEDURE SWAP(x, y:INTEGER)
+VAR
+    z: INTEGER;
+BEGIN
+     z:=x;
+     x:=y;
+     y:=z;
+END
+ALGORITHM sort
+VAR
+    tab: ARRAY_OF INTEGER;
+    i, j:INTEGER;
+BEGIN
+    for i from min 0 max tab.length-1 do
+     j=i
+     while (j>0 AND tab[j-1]>tab[j]) DO 
+     SWAP(tab[j-1], tab[j]) 
+     j:=j-1
+     END while
+     END for
+END
